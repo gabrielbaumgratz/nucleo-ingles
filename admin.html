@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - Núcleo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class', 
+            theme: {
+                extend: {
+                    colors: {
+                        'azul-principal': '#263593', 
+                        'azul-escuro': '#1a2361',   
+                        'azul-dark-accent': '#7986cb',
+                        'cinza-escuro-bg': '#1d1d1f', 
+                        'cinza-escuro-card': '#2c2c2e', 
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .btn-delete {
+            @apply ml-4 bg-red-500 text-white px-3 py-1 rounded-lg text-sm font-bold hover:bg-red-700 transition-colors;
+        }
+        .form-input {
+            @apply w-full p-3 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-azul-principal transition-all duration-300;
+        }
+        .btn-submit {
+            @apply w-full bg-azul-principal text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-azul-escuro transform transition-all duration-300;
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-gray-800 antialiased">
+
+    <div class="container mx-auto max-w-4xl p-8">
+
+        <header class="mb-10 text-center">
+            <img src="images\logonin.png" alt="Logo Núcleo de Inglês" class="h-16 w-auto mx-auto mb-4">
+            <h1 class="text-4xl font-black text-azul-principal">Painel Admin</h1>
+            <p class="text-lg text-gray-600">Gerenciamento de Professores</p>
+        </header>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            
+            <!-- Coluna 1: Adicionar Novo Professor -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl">
+                <h2 class="text-2xl font-bold mb-6">Adicionar Novo Professor</h2>
+                <form id="add-professor-form">
+                    <div class="mb-4">
+                        <label for="nome" class="block font-bold mb-2">Nome</label>
+                        <input type="text" id="nome" placeholder="Ex: Ana Silva" class="form-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="cargo" class="block font-bold mb-2">Cargo / Título</label>
+                        <input type="text" id="cargo" placeholder="Ex: Coordenadora Pedagógica" class="form-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="bio" class="block font-bold mb-2">Bio (Descrição)</label>
+                        <textarea id="bio" rows="4" placeholder="Ex: Especialista em intercâmbio..." class="form-input" required></textarea>
+                    </div>
+                    
+                    <!-- ATUALIZAÇÃO: Opção 1 (Upload) -->
+                    <div class="mb-4">
+                        <label for="imgUpload" class="block font-bold mb-2">Opção 1: Enviar Foto (Preferencial)</label>
+                        <input type="file" id="imgUpload" class="form-input file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-azul-principal/10 file:text-azul-principal hover:file:bg-azul-principal/20" accept="image/png, image/jpeg">
+                    </div>
+                    
+                    <!-- ATUALIZAÇÃO: Divisor "OU" -->
+                    <div class="flex items-center my-4">
+                        <span class="flex-grow bg-gray-200 h-px"></span>
+                        <span class="mx-4 font-bold text-gray-500">OU</span>
+                        <span class="flex-grow bg-gray-200 h-px"></span>
+                    </div>
+
+                    <!-- ATUALIZAÇÃO: Opção 2 (Link) -->
+                    <div class="mb-6">
+                        <label for="imgUrl" class="block font-bold mb-2">Opção 2: Colar Link da Foto</label>
+                        <input type="url" id="imgUrl" placeholder="https://site.com/foto.jpg" class="form-input">
+                        <p class="text-sm text-gray-500 mt-1">Use SÓ UMA opção. O envio do arquivo tem prioridade. Deixe os dois em branco para usar a foto padrão.</p>
+                    </div>
+
+                    <button type="submit" id="submit-button" class="btn-submit">
+                        Salvar Professor
+                    </button>
+                    <p id="form-success" class="text-green-600 font-bold mt-4 hidden">Professor salvo com sucesso!</p>
+                </form>
+            </div>
+
+            <!-- Coluna 2: Professores Atuais -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl">
+                <h2 class="text-2xl font-bold mb-6">Professores Atuais</h2>
+                <div id="professores-lista-container" class="space-y-4">
+                    <p id="lista-loading" class="text-gray-500">Carregando lista...</p>
+                    <ul id="professores-lista" class="list-none">
+                        <!-- Preenchido pelo admin.js -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIVISÓRIA E NOVA SEÇÃO -->
+    <hr class="container mx-auto max-w-4xl my-10 border-gray-300">
+
+    <div class="container mx-auto max-w-4xl p-8 pt-0">
+        <header class="mb-10 text-center">
+            <h1 class="text-4xl font-black text-azul-principal">Gerenciamento de Avisos</h1>
+            <p class="text-lg text-gray-600">Adicionar ou remover avisos e eventos do site.</p>
+        </header>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            
+            <!-- Coluna 1: Adicionar Novo Aviso -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl">
+                <h2 class="text-2xl font-bold mb-6">Adicionar Novo Aviso</h2>
+                <form id="add-aviso-form">
+                    <div class="mb-4">
+                        <label for="aviso-titulo" class="block font-bold mb-2">Título do Aviso</label>
+                        <input type="text" id="aviso-titulo" placeholder="Ex: Feriado de Corpus Christi" class="form-input" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="aviso-texto" class="block font-bold mb-2">Texto (Curto)</label>
+                        <textarea id="aviso-texto" rows="4" placeholder="Ex: Não haverá aula na quinta-feira (30/05)..." class="form-input" required></textarea>
+                    </div>
+                    <button type="submit" id="aviso-submit-button" class="btn-submit">
+                        Salvar Aviso
+                    </button>
+                    <p id="aviso-form-success" class="text-green-600 font-bold mt-4 hidden">Aviso salvo com sucesso!</p>
+                </form>
+            </div>
+
+            <!-- Coluna 2: Avisos Atuais -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl">
+                <h2 class="text-2xl font-bold mb-6">Avisos Atuais</h2>
+                <div id="avisos-lista-container" class="space-y-4">
+                    <p id="aviso-lista-loading" class="text-gray-500">Carregando lista de avisos...</p>
+                    <ul id="avisos-lista" class="list-none">
+                        <!-- Preenchido pelo admin.js -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/admin.js" type="module"></script>
+
+</body>
+</html>
