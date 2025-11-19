@@ -1,23 +1,24 @@
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
     <!-- ============================================= -->
     <!-- ============ CABEÇALHO (O HEAD) ============ -->
     <!-- ============================================= -->
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nucleo de Ingles</title>
-    
+
     <!-- Favicon (o iconezinho da aba) -->
     <link rel="icon" href="images\logonin.png" type="image/png">
 
     <!-- ======= CONFIGURAÇÃO DO TAILWIND ======= -->
     <!-- 1. Puxa o Tailwind da internet -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- 2. Puxa as fontes do Google (Inter) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    
+
     <!-- 3. Configuração (define cores e fontes customizadas) -->
     <script>
         tailwind.config = {
@@ -25,11 +26,11 @@
             theme: {
                 extend: {
                     colors: {
-                        'azul-principal': '#263593', 
-                        'azul-escuro': '#1a2361',   
+                        'azul-principal': '#263593',
+                        'azul-escuro': '#1a2361',
                         'azul-dark-accent': '#7986cb',
-                        'cinza-escuro-bg': '#1d1d1f', 
-                        'cinza-escuro-card': '#2c2c2e', 
+                        'cinza-escuro-bg': '#1d1d1f',
+                        'cinza-escuro-card': '#2c2c2e',
                     },
                     fontFamily: {
                         'inter': ['Inter', 'sans-serif']
@@ -38,7 +39,7 @@
             }
         }
     </script>
-    
+
     <!-- ======= CSS CUSTOMIZADO ======= -->
     <style type="text/tailwindcss">
         /* --- 1. Animações e Utilitários (Fade-in, etc) --- */
@@ -148,21 +149,22 @@
         }
     </style>
 </head>
-<body class="font-inter bg-gray-50 dark:bg-cinza-escuro-bg text-gray-800 dark:text-gray-200 transition-colors duration-300 antialiased">
+
+<body
+    class="font-inter bg-gray-50 dark:bg-cinza-escuro-bg text-gray-800 dark:text-gray-200 transition-colors duration-300 antialiased">
 
     <!-- ============================================= -->
     <!-- ============ NAVBAR (O MENU DE CIMA) ============ -->
     <!-- ============================================= -->
-    <nav class="fixed top-0 left-0 w-full bg-white/80 dark:bg-cinza-escuro-bg/80 backdrop-blur-xl shadow-sm z-50 transition-colors duration-300">
+    <nav
+        class="fixed top-0 left-0 w-full bg-white/80 dark:bg-cinza-escuro-bg/80 backdrop-blur-xl shadow-sm z-50 transition-colors duration-300">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 md:h-20">
-            
+
             <!-- Logo -->
             <a href="#home" class="transition-transform duration-300 hover:scale-105">
-                <img src="images\logonin.png" 
-                     alt="Logo Núcleo de Inglês" 
-                     class="h-12 w-auto"> 
+                <img src="images\logonin.png" alt="Logo Núcleo de Inglês" class="h-12 w-auto">
             </a>
-            
+
             <!-- Links Desktop (só aparece em PC/Tablet) -->
             <div class="hidden md:flex items-center space-x-8">
                 <!-- ATUALIZAÇÃO: Link do Aviso PISCANDO -->
@@ -173,40 +175,46 @@
                 <a href="#profissionais" class="nav-link">Profissionais</a>
                 <a href="#excursoes" class="nav-link">Excursões</a>
                 <a href="#contato" class="nav-link">Contato</a>
-                
+
                 <!-- Botão de Dark Mode (Desktop) -->
-                <button id="theme-toggle" aria-label="Alternar modo claro/escuro" class="ml-4 p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-cinza-escuro-card transition-colors">
-                    <svg id="theme-icon-sun" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                <button id="theme-toggle" aria-label="Alternar modo claro/escuro"
+                    class="ml-4 p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-cinza-escuro-card transition-colors">
+                    <svg id="theme-icon-sun" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
-                    <svg id="theme-icon-moon" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    <svg id="theme-icon-moon" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                     </svg>
                 </button>
             </div>
-            
+
             <!-- Botão Menu (só aparece em Celular) -->
             <!-- O script.js-->
-            <button id="menu-toggle" aria-label="Abrir menu" class="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300">
+            <button id="menu-toggle" aria-label="Abrir menu"
+                class="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300">
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
         </div>
-        
+
         <!-- ======= MENU MOBILE (A TELA QUE ABRE NO CELULAR) ======= -->
         <!-- O script.js tira o 'hidden' -->
-        <div id="mobile-menu" class="md:hidden hidden absolute top-0 left-0 w-full h-screen bg-white/95 dark:bg-cinza-escuro-bg/95 backdrop-blur-xl z-50 p-6">
+        <div id="mobile-menu"
+            class="md:hidden hidden absolute top-0 left-0 w-full h-screen bg-white/95 dark:bg-cinza-escuro-bg/95 backdrop-blur-xl z-50 p-6">
             <div class="flex justify-between items-center mb-12">
                 <a href="#home" class="mobile-link">
-                    <img src="images\logonin.png" 
-                         alt="Logo Núcleo de Inglês" 
-                         class="h-12 w-auto">
+                    <img src="images\logonin.png" alt="Logo Núcleo de Inglês" class="h-12 w-auto">
                 </a>
                 <!-- Botão de Fechar (X) -->
                 <button id="menu-close" aria-label="Fechar menu" class="p-2">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
@@ -220,13 +228,22 @@
                 <a href="#profissionais" class="mobile-link mobile-link-item">Profissionais</a>
                 <a href="#excursoes" class="mobile-link mobile-link-item">Excursões</a>
                 <a href="#contato" class="mobile-link mobile-link-item">Contato</a>
-                
+
                 <!-- Botão de Dark Mode (Mobile) -->
                 <div class="flex justify-center pt-6">
-                    <button id="theme-toggle-mobile" aria-label="Alternar modo claro/escuro" class="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-cinza-escuro-card transition-colors">
+                    <button id="theme-toggle-mobile" aria-label="Alternar modo claro/escuro"
+                        class="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-cinza-escuro-card transition-colors">
                         <span class="flex items-center gap-2">
-                            <svg id="theme-icon-sun-mobile" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-                            <svg id="theme-icon-moon-mobile" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                            <svg id="theme-icon-sun-mobile" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                            <svg id="theme-icon-moon-mobile" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            </svg>
                             <span id="theme-text-mobile"></span>
                         </span>
                     </button>
@@ -240,10 +257,12 @@
 
 
     <!-- ============================================= -->
-    <!-- ============ SEÇÃO 1: HOME ============ -->
+    <!-- ============ SEÇÃO 1: HOME ================== -->
     <!-- ============================================= -->
-    <section id="home" class="min-h-screen flex items-center justify-center text-center pt-20 px-4 relative bg-cover bg-center bg-scroll md:bg-fixed" 
-         style="background-image: url('https://sindilivreidiomas.com.br/wp-content/uploads/bfi_thumb/nucleo-de-ingles-nw66rjddp2ljcz6zpmn6elur21u8jr0dhjha5e4ju8.png');">
+    <section id="home"
+        class="min-h-screen flex items-center justify-center text-center pt-20 px-4 relative bg-cover bg-center bg-scroll md:bg-fixed"
+        style="background-image: url('images/frontndi.png');">
+
         <!-- Overlay (a camada escura/clara em cima da foto pra dar pra ler) -->
         <div class="absolute inset-0 bg-gray-50/[.55] dark:bg-cinza-escuro-bg/[.55] backdrop-blur-sm"></div>
 
@@ -252,7 +271,8 @@
             <h1 class="text-5xl md:text-8xl font-black mb-6 leading-tight fade-in-up">
                 Pense. <span class="text-azul-principal dark:text-azul-dark-accent">Fale.</span> Evolua.
             </h1>
-            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto fade-in-up" style="transition-delay: 150ms;">
+            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto fade-in-up"
+                style="transition-delay: 150ms;">
                 Descubra o prazer de aprender inglês em um ambiente acolhedor, focado no seu sucesso e bem-estar.
             </p>
             <a href="#cursos" class="btn-primary fade-in-up" style="transition-delay: 300ms;">
@@ -273,29 +293,33 @@
             <!-- Título da Seção -->
             <div class="md:flex justify-between items-center mb-16">
                 <div class="max-w-xl">
-                    <h2 class="text-4xl md:text-5xl font-black mb-6 fade-in-up">Quadro de <span class="text-azul-principal dark:text-azul-dark-accent">Avisos</span></h2>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6 fade-in-up">Quadro de <span
+                            class="text-azul-principal dark:text-azul-dark-accent">Avisos</span></h2>
                     <p class="text-lg text-gray-600 dark:text-gray-400 fade-in-up" style="transition-delay: 100ms;">
                         Fique por dentro das últimas atualizações, eventos e comunicados da escola.
                     </p>
                 </div>
-                <div class="hidden md:block text-lg text-gray-500 dark:text-gray-400 font-bold fade-in-up" style="transition-delay: 200ms;">
+                <div class="hidden md:block text-lg text-gray-500 dark:text-gray-400 font-bold fade-in-up"
+                    style="transition-delay: 200ms;">
                     Arraste para ver →
                 </div>
             </div>
-            
+
             <!-- MOLDE (Template): O Card de Aviso (fica escondido) -->
             <template id="aviso-card-template">
                 <div class="snap-center flex-shrink-0 w-[90%] sm:w-[80%] md:w-[350px] base-card fade-in-up">
                     <div class="p-6 flex flex-col h-full">
-                        <span class="block text-sm font-bold text-azul-principal dark:text-azul-dark-accent mb-2 aviso-data">[Data]</span>
+                        <span
+                            class="block text-sm font-bold text-azul-principal dark:text-azul-dark-accent mb-2 aviso-data">[Data]</span>
                         <h3 class="text-2xl font-bold mb-3 aviso-titulo">[Título do Aviso]</h3>
                         <p class="text-gray-600 dark:text-gray-400 flex-grow aviso-texto">[Texto do aviso...]</p>
                     </div>
                 </div>
             </template>
-            
+
             <!-- Container do Carrossel (Onde os cards aparecem) -->
-            <div id="avisos-carousel-container" class="flex overflow-x-auto gap-6 md:gap-8 snap-x snap-mandatory pb-6 -mb-6 scroll-hidden">
+            <div id="avisos-carousel-container"
+                class="flex overflow-x-auto gap-6 md:gap-8 snap-x snap-mandatory pb-6 -mb-6 scroll-hidden">
                 <!-- Mensagem de Loading (enquanto o Firebase não responde) -->
                 <div id="avisos-loading" class="w-full text-center py-10 fade-in-up">
                     <p class="text-lg text-gray-500 dark:text-gray-400">Carregando avisos...</p>
@@ -305,11 +329,19 @@
 
         <!-- ATUALIZAÇÃO: Botões de Navegação (Setinhas) -->
         <!-- O script.js escuta o clique nesses IDs -->
-        <button id="avisos-prev" aria-label="Aviso anterior" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/50 dark:bg-cinza-escuro-bg/50 backdrop-blur-md rounded-full p-2 text-azul-principal dark:text-azul-dark-accent hover:bg-white transition-all shadow-lg z-10">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        <button id="avisos-prev" aria-label="Aviso anterior"
+            class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/50 dark:bg-cinza-escuro-bg/50 backdrop-blur-md rounded-full p-2 text-azul-principal dark:text-azul-dark-accent hover:bg-white transition-all shadow-lg z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
         </button>
-        <button id="avisos-next" aria-label="Próximo aviso" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/50 dark:bg-cinza-escuro-bg/50 backdrop-blur-md rounded-full p-2 text-azul-principal dark:text-azul-dark-accent hover:bg-white transition-all shadow-lg z-10">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        <button id="avisos-next" aria-label="Próximo aviso"
+            class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/50 dark:bg-cinza-escuro-bg/50 backdrop-blur-md rounded-full p-2 text-azul-principal dark:text-azul-dark-accent hover:bg-white transition-all shadow-lg z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
         </button>
     </section>
     <!-- ============================================= -->
@@ -322,15 +354,18 @@
     <!-- ============================================= -->
     <section id="cursos" class="py-24 bg-white dark:bg-cinza-escuro-card">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-black text-center mb-6 fade-in-up">Nossos <span class="text-azul-principal dark:text-azul-dark-accent">Cursos</span></h2>
-            <p class="text-lg text-center text-gray-600 dark:text-gray-400 mb-16 max-w-xl mx-auto fade-in-up" style="transition-delay: 100ms;">Do básico ao avançado, temos o curso perfeito para sua necessidade.</p>
-            
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-6 fade-in-up">Nossos <span
+                    class="text-azul-principal dark:text-azul-dark-accent">Cursos</span></h2>
+            <p class="text-lg text-center text-gray-600 dark:text-gray-400 mb-16 max-w-xl mx-auto fade-in-up"
+                style="transition-delay: 100ms;">Do básico ao avançado, temos o curso perfeito para sua necessidade.</p>
+
             <!-- Grid dos 3 Cards (Kids, Teens, Adultos) -->
             <div class="grid md:grid-cols-3 gap-8">
-                
+
                 <!-- Card 1: Kids -->
                 <div class="course-card fade-in-up" style="transition-delay: 200ms;">
-                    <img src="https://img.freepik.com/fotos-gratis/alunos-de-leitura-na-biblioteca_1098-4048.jpg?semt=ais_hybrid&w=740&q=80" alt="Crianças brincando" class="w-full h-56 object-cover">
+                    <img src="https://img.freepik.com/fotos-gratis/alunos-de-leitura-na-biblioteca_1098-4048.jpg?semt=ais_hybrid&w=740&q=80"
+                        alt="Crianças brincando" class="w-full h-56 object-cover">
                     <div class="p-8 flex flex-col flex-grow">
                         <h3 class="text-2xl font-bold mb-3">Inglês para Crianças</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow">
@@ -339,7 +374,7 @@
                         <a href="#contato" class="btn-secondary text-center">Saiba Mais</a>
                     </div>
                 </div>
-                
+
                 <!-- Card 2: Teens -->
                 <div class="course-card fade-in-up" style="transition-delay: 300ms;">
                     <img src="images/teenstudy.jpg" alt="Adolescentes estudando" class="w-full h-56 object-cover">
@@ -354,7 +389,8 @@
 
                 <!-- Card 3: Adultos -->
                 <div class="course-card fade-in-up" style="transition-delay: 400ms;">
-                    <img src="https://ugc.futurelearn.com/uploads/images/c8/51/c851c2e6-bd7a-4c20-ac11-4cd7778c4202.jpg" alt="Reunião de negócios" class="w-full h-56 object-cover">
+                    <img src="https://ugc.futurelearn.com/uploads/images/c8/51/c851c2e6-bd7a-4c20-ac11-4cd7778c4202.jpg"
+                        alt="Reunião de negócios" class="w-full h-56 object-cover">
                     <div class="p-8 flex flex-col flex-grow">
                         <h3 class="text-2xl font-bold mb-3">Inglês para Adultos</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow">
@@ -376,36 +412,47 @@
     <!-- ============================================= -->
     <section id="empresa" class="py-24">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-black text-center mb-16 fade-in-up">Nossa <span class="text-azul-principal dark:text-azul-dark-accent">Missão</span></h2>
-            
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-16 fade-in-up">Nossa <span
+                    class="text-azul-principal dark:text-azul-dark-accent">Missão</span></h2>
+
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                
+
                 <!-- Bloco Esquerdo: Citação -->
                 <div class="space-y-6 fade-in-left" style="transition-delay: 100ms;">
-                    <blockquote class="border-l-4 border-azul-principal dark:border-azul-dark-accent pl-8 text-3xl italic font-medium text-gray-700 dark:text-gray-300">
+                    <blockquote
+                        class="border-l-4 border-azul-principal dark:border-azul-dark-accent pl-8 text-3xl italic font-medium text-gray-700 dark:text-gray-300">
                         "Se você pode sonhar, você pode realizar o seu sonho"
                     </blockquote>
                     <p class="text-lg text-gray-600 dark:text-gray-400">
-                        Desde 1983, o Núcleo acredita realmente que os sonhos podem se tornar reais. Se o seu é falar uma outra língua para se manter em compasso com a mudança dos tempos, venha para o Núcleo.
+                        Desde 1983, o Núcleo acredita realmente que os sonhos podem se tornar reais. Se o seu é falar
+                        uma outra língua para se manter em compasso com a mudança dos tempos, venha para o Núcleo.
                     </p>
                 </div>
-                
+
                 <!-- Bloco Direito: Filosofia (1, 2, 3) -->
-                <div class="space-y-6 p-8 bg-white dark:bg-cinza-escuro-card rounded-2xl shadow-xl fade-in-right" style="transition-delay: 200ms;">
-                    <p class="text-lg">É nossa filosofia que o domínio de uma língua não é suficiente. Aqui no Núcleo:</p>
-                    
+                <div class="space-y-6 p-8 bg-white dark:bg-cinza-escuro-card rounded-2xl shadow-xl fade-in-right"
+                    style="transition-delay: 200ms;">
+                    <p class="text-lg">É nossa filosofia que o domínio de uma língua não é suficiente. Aqui no Núcleo:
+                    </p>
+
                     <ul class="space-y-4 pt-2">
                         <li class="flex items-start text-lg">
-                            <span class="flex-shrink-0 w-8 h-8 bg-azul-principal/10 text-azul-principal dark:bg-azul-dark-accent/20 dark:text-azul-dark-accent rounded-full flex items-center justify-center font-black">1</span>
-                            <span class="ml-4"><strong class="text-gray-900 dark:text-white">INGLÊS</strong> é o nosso meio.</span>
+                            <span
+                                class="flex-shrink-0 w-8 h-8 bg-azul-principal/10 text-azul-principal dark:bg-azul-dark-accent/20 dark:text-azul-dark-accent rounded-full flex items-center justify-center font-black">1</span>
+                            <span class="ml-4"><strong class="text-gray-900 dark:text-white">INGLÊS</strong> é o nosso
+                                meio.</span>
                         </li>
                         <li class="flex items-start text-lg">
-                            <span class="flex-shrink-0 w-8 h-8 bg-azul-principal/10 text-azul-principal dark:bg-azul-dark-accent/20 dark:text-azul-dark-accent rounded-full flex items-center justify-center font-black">2</span>
-                            <span class="ml-4"><strong class="text-gray-900 dark:text-white">EDUCAÇÃO</strong> é a nossa meta.</span>
+                            <span
+                                class="flex-shrink-0 w-8 h-8 bg-azul-principal/10 text-azul-principal dark:bg-azul-dark-accent/20 dark:text-azul-dark-accent rounded-full flex items-center justify-center font-black">2</span>
+                            <span class="ml-4"><strong class="text-gray-900 dark:text-white">EDUCAÇÃO</strong> é a nossa
+                                meta.</span>
                         </li>
-                         <li class="flex items-start text-lg">
-                            <span class="flex-shrink-0 w-8 h-8 bg-azul-principal/10 text-azul-principal dark:bg-azul-dark-accent/20 dark:text-azul-dark-accent rounded-full flex items-center justify-center font-black">3</span>
-                            <span class="ml-4"><strong class="text-gray-900 dark:text-white">ENTUSIASMO</strong> é a nossa força propulsora.</span>
+                        <li class="flex items-start text-lg">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 bg-azul-principal/10 text-azul-principal dark:bg-azul-dark-accent/20 dark:text-azul-dark-accent rounded-full flex items-center justify-center font-black">3</span>
+                            <span class="ml-4"><strong class="text-gray-900 dark:text-white">ENTUSIASMO</strong> é a
+                                nossa força propulsora.</span>
                         </li>
                     </ul>
                 </div>
@@ -422,80 +469,127 @@
     <!-- ============================================= -->
     <section id="ambiente" class="py-24 bg-white dark:bg-cinza-escuro-card">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-black text-center mb-6 fade-in-up">Nosso <span class="text-azul-principal dark:text-azul-dark-accent">Espaço</span></h2>
-            <p class="text-lg text-center text-gray-600 dark:text-gray-400 mb-16 max-w-xl mx-auto fade-in-up" style="transition-delay: 100ms;">Uma infraestrutura completa para seu aprendizado e conforto.</p>
-            
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-6 fade-in-up">Nosso <span
+                    class="text-azul-principal dark:text-azul-dark-accent">Espaço</span></h2>
+            <p class="text-lg text-center text-gray-600 dark:text-gray-400 mb-16 max-w-xl mx-auto fade-in-up"
+                style="transition-delay: 100ms;">Uma infraestrutura completa para seu aprendizado e conforto.</p>
+
             <!-- Grid dos 6 ícones/fotos (Lab, Auditório, etc) -->
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                
+
                 <!-- Card 1 (Laboratório) -->
                 <div class="feature-card fade-in-up group" style="transition-delay: 200ms;">
-                    <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-all duration-300 group-hover:opacity-100" 
-                         style="background-image: url('https://www.nucleodeingles.com.br/imagens/empresa/audio1.jpg')">
-                        <div class="absolute inset-0 bg-black/50"></div> 
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-all duration-300 group-hover:opacity-100"
+                        style="background-image: url('https://www.nucleodeingles.com.br/imagens/empresa/audio1.jpg')">
+                        <div class="absolute inset-0 bg-black/50"></div>
                     </div>
                     <div class="feature-card-content group-hover:text-white group-hover:drop-shadow-lg">
-                        <svg class="w-12 h-12 text-azul-principal dark:text-azul-dark-accent mb-3 transition-colors duration-300 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a4 4 0 0 0-7.3-2.73C9.6 5.12 8.39 5 7 5a5 5 0 0 0-5 5v2"/><path d="M7 15v-2a5 5 0 0 0 5-5 5 5 0 0 0 5 5v2"/><path d="M17 15v-2a5 5 0 0 0-5-5 5 5 0 0 0-5 5v2"/><rect width="14" height="6" x="5" y="15" rx="2"/></svg>
+                        <svg class="w-12 h-12 text-azul-principal dark:text-azul-dark-accent mb-3 transition-colors duration-300 group-hover:text-white"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8a4 4 0 0 0-7.3-2.73C9.6 5.12 8.39 5 7 5a5 5 0 0 0-5 5v2" />
+                            <path d="M7 15v-2a5 5 0 0 0 5-5 5 5 0 0 0 5 5v2" />
+                            <path d="M17 15v-2a5 5 0 0 0-5-5 5 5 0 0 0-5 5v2" />
+                            <rect width="14" height="6" x="5" y="15" rx="2" />
+                        </svg>
                         <h3 class="font-bold text-lg">Laboratório</h3>
                     </div>
                 </div>
-                
+
                 <!-- Card 2 (Auditório) -->
                 <div class="feature-card fade-in-up group" style="transition-delay: 250ms;">
-                     <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-all duration-300 group-hover:opacity-100" 
-                         style="background-image: url('https://www.nucleodeingles.com.br/imagens/empresa/auditorio1.jpg')">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-all duration-300 group-hover:opacity-100"
+                        style="background-image: url('https://www.nucleodeingles.com.br/imagens/empresa/auditorio1.jpg')">
                         <div class="absolute inset-0 bg-black/50"></div>
-                     </div>
+                    </div>
                     <div class="feature-card-content group-hover:text-white group-hover:drop-shadow-lg">
-                        <svg class="w-12 h-12 text-azul-principal dark:text-azul-dark-accent mb-3 transition-colors duration-300 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V5"/><path d="M8.5 12.5a5 5 0 1 0 7 0"/><path d="M12 17.5V14"/><path d="M5 8v2a7 7 0 1 0 14 0V8"/><path d="M5 14v-2a7 7 0 1 1 14 0v2"/></svg>
+                        <svg class="w-12 h-12 text-azul-principal dark:text-azul-dark-accent mb-3 transition-colors duration-300 group-hover:text-white"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 8V5" />
+                            <path d="M8.5 12.5a5 5 0 1 0 7 0" />
+                            <path d="M12 17.5V14" />
+                            <path d="M5 8v2a7 7 0 1 0 14 0V8" />
+                            <path d="M5 14v-2a7 7 0 1 1 14 0v2" />
+                        </svg>
                         <h3 class="font-bold text-lg">Auditório</h3>
                     </div>
                 </div>
 
                 <!-- Card 3 (Biblioteca) -->
                 <div class="feature-card fade-in-up group" style="transition-delay: 300ms;">
-                     <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-all duration-300 group-hover:opacity-100" 
-                         style="background-image: url('https://www.nucleodeingles.com.br/imagens/empresa/biblioteca1.jpg')">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-all duration-300 group-hover:opacity-100"
+                        style="background-image: url('https://www.nucleodeingles.com.br/imagens/empresa/biblioteca1.jpg')">
                         <div class="absolute inset-0 bg-black/50"></div>
-                     </div>
+                    </div>
                     <div class="feature-card-content group-hover:text-white group-hover:drop-shadow-lg">
-                        <svg class="w-12 h-12 text-azul-principal dark:text-azul-dark-accent mb-3 transition-colors duration-300 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
+                        <svg class="w-12 h-12 text-azul-principal dark:text-azul-dark-accent mb-3 transition-colors duration-300 group-hover:text-white"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+                            <path d="M8 7h6" />
+                            <path d="M8 11h8" />
+                        </svg>
                         <h3 class="font-bold text-lg">Biblioteca</h3>
                     </div>
                 </div>
 
                 <!-- Card 4 (Copa) -->
                 <div class="feature-card fade-in-up group" style="transition-delay: 350ms;">
-                     <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-all duration-300 group-hover:opacity-100" 
-                         style="background-image: url('https://www.nucleodeingles.com.br/imagens/empresa/cozinha.jpg')">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-all duration-300 group-hover:opacity-100"
+                        style="background-image: url('https://www.nucleodeingles.com.br/imagens/empresa/cozinha.jpg')">
                         <div class="absolute inset-0 bg-black/50"></div>
-                     </div>
+                    </div>
                     <div class="feature-card-content group-hover:text-white group-hover:drop-shadow-lg">
-                        <svg class="w-12 h-12 text-azul-principal dark:text-azul-dark-accent mb-3 transition-colors duration-300 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h8z"/><path d="M6 2v6"/><path d="M18 2v6"/><path d="M7 20h10v-2a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2z"/></svg>
+                        <svg class="w-12 h-12 text-azul-principal dark:text-azul-dark-accent mb-3 transition-colors duration-300 group-hover:text-white"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 2v2" />
+                            <path d="M14 2v2" />
+                            <path d="M16 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h8z" />
+                            <path d="M6 2v6" />
+                            <path d="M18 2v6" />
+                            <path d="M7 20h10v-2a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2z" />
+                        </svg>
                         <h3 class="font-bold text-lg">Copa</h3>
                     </div>
                 </div>
 
                 <!-- Card 5 (Cantina) -->
                 <div class="feature-card fade-in-up group" style="transition-delay: 400ms;">
-                     <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-all duration-300 group-hover:opacity-100" 
-                         style="background-image: url('https://www.nucleodeingles.com.br/imagens/empresa/cantina1.jpg')">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-all duration-300 group-hover:opacity-100"
+                        style="background-image: url('https://www.nucleodeingles.com.br/imagens/empresa/cantina1.jpg')">
                         <div class="absolute inset-0 bg-black/50"></div>
-                     </div>
+                    </div>
                     <div class="feature-card-content group-hover:text-white group-hover:drop-shadow-lg">
-                        <svg class="w-12 h-12 text-azul-principal dark:text-azul-dark-accent mb-3 transition-colors duration-300 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12a10 10 0 0 1 20 0v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6Z"/><path d="M6 12v.01"/><path d="M18 12v.01"/><path d="m17.5 15.27.24-.24a2.2 2.2 0 0 0-3.1-3.13l-.24.24"/><path d="m6.5 15.27-.24-.24a2.2 2.2 0 0 1 3.1-3.13l.24.24"/></svg>
+                        <svg class="w-12 h-12 text-azul-principal dark:text-azul-dark-accent mb-3 transition-colors duration-300 group-hover:text-white"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 12a10 10 0 0 1 20 0v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6Z" />
+                            <path d="M6 12v.01" />
+                            <path d="M18 12v.01" />
+                            <path d="m17.5 15.27.24-.24a2.2 2.2 0 0 0-3.1-3.13l-.24.24" />
+                            <path d="m6.5 15.27-.24-.24a2.2 2.2 0 0 1 3.1-3.13l.24.24" />
+                        </svg>
                         <h3 class="font-bold text-lg">Cantina</h3>
                     </div>
                 </div>
 
                 <!-- Card 6 (Lazer) -->
                 <div class="feature-card fade-in-up group" style="transition-delay: 450ms;">
-                     <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-all duration-300 group-hover:opacity-100" 
-                         style="background-image: url('https://www.nucleodeingles.com.br/imagens/empresa/lazer.jpg')">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-all duration-300 group-hover:opacity-100"
+                        style="background-image: url('https://www.nucleodeingles.com.br/imagens/empresa/lazer.jpg')">
                         <div class="absolute inset-0 bg-black/50"></div>
-                     </div>
+                    </div>
                     <div class="feature-card-content group-hover:text-white group-hover:drop-shadow-lg">
-                        <svg class="w-12 h-12 text-azul-principal dark:text-azul-dark-accent mb-3 transition-colors duration-300 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12h4m-2 2v-4"/><path d="M14 12h4m-2 2v-4"/><rect width="18" height="12" x="3" y="7" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                        <svg class="w-12 h-12 text-azul-principal dark:text-azul-dark-accent mb-3 transition-colors duration-300 group-hover:text-white"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 12h4m-2 2v-4" />
+                            <path d="M14 12h4m-2 2v-4" />
+                            <rect width="18" height="12" x="3" y="7" rx="2" />
+                            <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                        </svg>
                         <h3 class="font-bold text-lg">Lazer</h3>
                     </div>
                 </div>
@@ -516,31 +610,36 @@
             <!-- Título da Seção -->
             <div class="md:flex justify-between items-center mb-16">
                 <div class="max-w-xl">
-                    <h2 class="text-4xl md:text-5xl font-black mb-6 fade-in-up">Conheça os <span class="text-azul-principal dark:text-azul-dark-accent">Profissionais</span></h2>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6 fade-in-up">Conheça os <span
+                            class="text-azul-principal dark:text-azul-dark-accent">Profissionais</span></h2>
                     <p class="text-lg text-gray-600 dark:text-gray-400 fade-in-up" style="transition-delay: 100ms;">
                         Nosso time não só ensina inglês. Eles viveram o inglês.
                     </p>
                 </div>
-                <div class="hidden md:block text-lg text-gray-500 dark:text-gray-400 font-bold fade-in-up" style="transition-delay: 200ms;">
+                <div class="hidden md:block text-lg text-gray-500 dark:text-gray-400 font-bold fade-in-up"
+                    style="transition-delay: 200ms;">
                     Arraste para ver →
                 </div>
             </div>
-            
+
             <!-- MOLDE (Template): O Card de Professor (fica escondido) -->
             <!-- O firebase.js pega esse, clona, e recheia com os dados -->
             <template id="professor-card-template">
                 <div class="snap-center flex-shrink-0 w-[90%] sm:w-[80%] md:w-[350px] base-card fade-in-up">
-                    <img src="https://placehold.co/400x400/2c2c2e/white?text=... " alt="Foto do Professor" class="w-full h-80 object-cover professor-img">
+                    <img src="https://placehold.co/400x400/2c2c2e/white?text=... " alt="Foto do Professor"
+                        class="w-full h-80 object-cover professor-img">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold professor-nome">[Nome]</h3>
-                        <div class="text-azul-principal dark:text-azul-dark-accent font-bold mb-3 professor-cargo">[Cargo]</div>
+                        <div class="text-azul-principal dark:text-azul-dark-accent font-bold mb-3 professor-cargo">
+                            [Cargo]</div>
                         <p class="text-gray-600 dark:text-gray-400 professor-bio">[Bio]</p>
                     </div>
                 </div>
             </template>
-            
+
             <!-- Container do Carrossel (Onde os cards aparecem) -->
-            <div id="profissionais-carousel-container" class="flex overflow-x-auto gap-6 md:gap-8 snap-x snap-mandatory pb-6 -mb-6 scroll-hidden">
+            <div id="profissionais-carousel-container"
+                class="flex overflow-x-auto gap-6 md:gap-8 snap-x snap-mandatory pb-6 -mb-6 scroll-hidden">
                 <!-- Mensagem de Loading -->
                 <div id="profissionais-loading" class="w-full text-center py-10 fade-in-up">
                     <p class="text-lg text-gray-500 dark:text-gray-400">Carregando professores...</p>
@@ -550,11 +649,19 @@
 
         <!-- ATUALIZAÇÃO: Botões de Navegação (Setinhas) -->
         <!-- O script.js escuta o clique nesses IDs -->
-        <button id="prof-prev" aria-label="Professor anterior" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/50 dark:bg-cinza-escuro-bg/50 backdrop-blur-md rounded-full p-2 text-azul-principal dark:text-azul-dark-accent hover:bg-white transition-all shadow-lg z-10">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        <button id="prof-prev" aria-label="Professor anterior"
+            class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/50 dark:bg-cinza-escuro-bg/50 backdrop-blur-md rounded-full p-2 text-azul-principal dark:text-azul-dark-accent hover:bg-white transition-all shadow-lg z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
         </button>
-        <button id="prof-next" aria-label="Próximo professor" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/50 dark:bg-cinza-escuro-bg/50 backdrop-blur-md rounded-full p-2 text-azul-principal dark:text-azul-dark-accent hover:bg-white transition-all shadow-lg z-10">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        <button id="prof-next" aria-label="Próximo professor"
+            class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/50 dark:bg-cinza-escuro-bg/50 backdrop-blur-md rounded-full p-2 text-azul-principal dark:text-azul-dark-accent hover:bg-white transition-all shadow-lg z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
         </button>
     </section>
     <!-- ============================================= -->
@@ -567,29 +674,35 @@
     <!-- ============================================= -->
     <section id="excursoes" class="py-24 bg-white dark:bg-cinza-escuro-card">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-black text-center mb-6 fade-in-up">Excursões & <span class="text-azul-principal dark:text-azul-dark-accent">Eventos</span></h2>
-            <p class="text-lg text-center text-gray-600 dark:text-gray-400 mb-16 max-w-xl mx-auto fade-in-up" style="transition-delay: 100ms;">Porque inglês se aprende (e se vive) fora da sala de aula.</p>
-            
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-6 fade-in-up">Excursões & <span
+                    class="text-azul-principal dark:text-azul-dark-accent">Eventos</span></h2>
+            <p class="text-lg text-center text-gray-600 dark:text-gray-400 mb-16 max-w-xl mx-auto fade-in-up"
+                style="transition-delay: 100ms;">Porque inglês se aprende (e se vive) fora da sala de aula.</p>
+
             <!-- Grid das 2 Excursões (Disney, Europa) -->
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Card 1: Disney -->
                 <div class="base-card fade-in-up" style="transition-delay: 200ms;">
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/11/9a/1f/cinderella-castle.jpg?w=1200&h=-1&s=1" alt="DisneyWorld" class="w-full h-64 object-cover">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/11/9a/1f/cinderella-castle.jpg?w=1200&h=-1&s=1"
+                        alt="DisneyWorld" class="w-full h-64 object-cover">
                     <div class="p-8">
                         <h3 class="text-2xl font-bold mb-3">DisneyWorld - O Reino Encantado</h3>
                         <p class="text-gray-600 dark:text-gray-400">
-                            Há 20 anos transformamos sonhos em realidade. Estamos sempre prontos a voltar à terra de Tio Sam assim que novos grupos são formados.
+                            Há 20 anos transformamos sonhos em realidade. Estamos sempre prontos a voltar à terra de Tio
+                            Sam assim que novos grupos são formados.
                         </p>
                     </div>
                 </div>
-                
+
                 <!-- Card 2: Europa / Ásia -->
                 <div class="base-card fade-in-up" style="transition-delay: 300ms;">
-                    <img src="https://simify.com/cdn/shop/articles/List_of_European_Landmarks.jpg?v=1700443801" alt="Europa e Ásia" class="w-full h-64 object-cover">
+                    <img src="https://simify.com/cdn/shop/articles/List_of_European_Landmarks.jpg?v=1700443801"
+                        alt="Europa e Ásia" class="w-full h-64 object-cover">
                     <div class="p-8">
                         <h3 class="text-2xl font-bold mb-3">Europa & Ásia - O Velho Mundo</h3>
                         <p class="text-gray-600 dark:text-gray-400">
-                            Quando um grupo manifesta interesse pela cultura do velho mundo, o núcleo se une a ele em busca do conhecimento que a Europa e a Ásia proporcionam.
+                            Quando um grupo manifesta interesse pela cultura do velho mundo, o núcleo se une a ele em
+                            busca do conhecimento que a Europa e a Ásia proporcionam.
                         </p>
                     </div>
                 </div>
@@ -600,7 +713,8 @@
                 <h3 class="text-3xl font-bold mb-10 fade-in-up" style="transition-delay: 400ms;">
                     Eventos & Datas Comemorativas
                 </h3>
-                <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto fade-in-up" style="transition-delay: 500ms;">
+                <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto fade-in-up"
+                    style="transition-delay: 500ms;">
                     <span class="event-badge">Thanksgiving</span>
                     <span class="event-badge">Halloween</span>
                     <span class="event-badge">Easter</span>
@@ -621,14 +735,19 @@
     <!-- ============================================= -->
     <section id="contato" class="py-24">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-black text-center mb-6 fade-in-up">Mande um <span class="text-azul-principal dark:text-azul-dark-accent">"Hi!"</span></h2>
-            <p class="text-lg text-center text-gray-600 dark:text-gray-400 mb-16 max-w-xl mx-auto fade-in-up" style="transition-delay: 100ms;">Agende uma aula experimental 0800. Vem tomar um café com a gente no QG.</p>
-            
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-6 fade-in-up">Mande um <span
+                    class="text-azul-principal dark:text-azul-dark-accent">"Hi!"</span></h2>
+            <p class="text-lg text-center text-gray-600 dark:text-gray-400 mb-16 max-w-xl mx-auto fade-in-up"
+                style="transition-delay: 100ms;">Agende uma aula experimental 0800. Vem tomar um café com a gente no QG.
+            </p>
+
             <div class="grid md:grid-cols-2 gap-12 items-start">
-                
+
                 <!-- Lado Esquerdo: Formulário -->
-                <div id="form-container" class="bg-white dark:bg-cinza-escuro-card p-8 md:p-10 rounded-2xl shadow-2xl fade-in-left" style="transition-delay: 200ms;">
-                    
+                <div id="form-container"
+                    class="bg-white dark:bg-cinza-escuro-card p-8 md:p-10 rounded-2xl shadow-2xl fade-in-left"
+                    style="transition-delay: 200ms;">
+
                     <!-- O Formulário em si (que o firebase.js vai escutar) -->
                     <form id="contact-form">
                         <div class="mb-5">
@@ -637,11 +756,14 @@
                         </div>
                         <div class="mb-5">
                             <label for="email" class="block font-bold mb-2">Seu Melhor E-mail</label>
-                            <input type="email" id="email" placeholder="seu.melhor@email.com" class="form-input" required>
+                            <input type="email" id="email" placeholder="seu.melhor@email.com" class="form-input"
+                                required>
                         </div>
                         <div class="mb-6">
                             <label for="message" class="block font-bold mb-2">Mensagem</label>
-                            <textarea id="message" rows="5" placeholder="Opa! Tenho interesse em saber mais sobre os cursos..." class="form-input" required></textarea>
+                            <textarea id="message" rows="5"
+                                placeholder="Opa! Tenho interesse em saber mais sobre os cursos..." class="form-input"
+                                required></textarea>
                         </div>
                         <button type="submit" id="submit-button" class="btn-submit">
                             Agendar Aula Experimental
@@ -651,53 +773,59 @@
                     <!-- Mensagem de Sucesso (Oculta) -->
                     <!-- O firebase.js tira o 'hidden' quando o form envia -->
                     <div id="form-success-message" class="hidden text-center fade-in-up">
-                        <svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
                         <h3 class="text-2xl font-bold mb-2">Inscrição enviada!</h3>
-                        <p id="success-text" class="text-gray-600 dark:text-gray-400">Valeu! Recebemos sua mensagem e entraremos em contato em breve.</p>
+                        <p id="success-text" class="text-gray-600 dark:text-gray-400">Valeu! Recebemos sua mensagem e
+                            entraremos em contato em breve.</p>
                     </div>
                 </div>
-                
+
                 <!-- Lado Direito: Mapa e Infos -->
                 <div class="pt-8 md:pt-0 fade-in-right" style="transition-delay: 300ms;">
                     <h3 class="text-3xl font-bold mb-4">Onde nos encontrar</h3>
                     <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
                         Nosso QG é ali no São Luiz, pertinho da Lagoa da Pampulha. Fácil de chegar!
                     </p>
-                    
+
                     <!-- Infos (Telefone, Email, Endereço) -->
                     <div class="space-y-4 mb-6">
                         <div class="flex items-center gap-4">
                             <!-- ... (Ícone Telefone) ... -->
                             <div>
                                 <span class="block text-sm font-bold text-gray-500">Telefone</span>
-                                <a href="tel:+553134414242" class="text-lg font-bold text-gray-900 dark:text-gray-100 hover:underline">(31) 3441-4242</a>
+                                <a href="tel:+553134414242"
+                                    class="text-lg font-bold text-gray-900 dark:text-gray-100 hover:underline">(31)
+                                    3441-4242</a>
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
                             <!-- ... (Ícone Email) ... -->
                             <div>
                                 <span class="block text-sm font-bold text-gray-500">E-mail</span>
-                                <a href="mailto:nucleo@nucleodeingles.com.br" class="text-lg font-bold text-gray-900 dark:text-gray-100 hover:underline">nucleo@nucleodeingles.com.br</a>
+                                <a href="mailto:nucleo@nucleodeingles.com.br"
+                                    class="text-lg font-bold text-gray-900 dark:text-gray-100 hover:underline">nucleo@nucleodeingles.com.br</a>
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
                             <!-- ... (Ícone Endereço) ... -->
                             <div>
                                 <span class="block text-sm font-bold text-gray-500">Endereço</span>
-                                <span class="text-lg font-bold text-gray-900 dark:text-gray-100">Av. Alfredo Camarate, 315 - São Luiz, BH/MG</span>
+                                <span class="text-lg font-bold text-gray-900 dark:text-gray-100">Av. Alfredo Camarate,
+                                    315 - São Luiz, BH/MG</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- O Iframe do Google Maps -->
-                    <div class="w-full h-96 rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-cinza-escuro-card">
+                    <div
+                        class="w-full h-96 rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-cinza-escuro-card">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.721464366622!2d-43.95370312574043!3d-19.89392173874987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa690f055373a97%3A0x6a1f89e47f5cf53!2sAv.%20Alfredo%20Camarate%2C%20315%20-%20S%C3%A3o%20Luiz%2C%20Belo%20Horizonte%20-%20MG%2C%2031310-000!5e0!3m2!1spt-BR!2sbr!4v1716383468550!5m2!1spt-BR!2sbr"
-                            width="100%"
-                            height="100%"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
                             class="grayscale dark:grayscale-0 contrast-125 dark:contrast-100">
                         </iframe>
@@ -714,7 +842,8 @@
     <!-- ============================================= -->
     <!-- ============ RODAPÉ (FOOTER) ============ -->
     <!-- ============================================= -->
-    <footer class="bg-gray-100 dark:bg-cinza-escuro-bg text-gray-500 dark:text-gray-400 p-8 text-center border-t border-gray-200 dark:border-gray-800">
+    <footer
+        class="bg-gray-100 dark:bg-cinza-escuro-bg text-gray-500 dark:text-gray-400 p-8 text-center border-t border-gray-200 dark:border-gray-800">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <p>© 2025 Núcleo de Inglês (Desde 1983). Todos os direitos reservados.</p>
         </div>
@@ -722,8 +851,7 @@
 
     <!-- Botão "Voltar ao Topo" (flutuante) -->
     <!-- O script.js escuta o scroll e bota a classe 'btn-top-visible' nele -->
-    <a id="back-to-top" href="#home" aria-label="Voltar ao topo" 
-       class="fixed bottom-6 right-6 bg-azul-principal dark:bg-azul-dark-accent text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 transform translate-y-4 pointer-events-none 
+    <a id="back-to-top" href="#home" aria-label="Voltar ao topo" class="fixed bottom-6 right-6 bg-azul-principal dark:bg-azul-dark-accent text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 transform translate-y-4 pointer-events-none 
                hover:bg-azul-escuro dark:hover:bg-azul-principal hover:scale-110">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
@@ -734,14 +862,15 @@
     <!-- ============ SCRIPTS (O CÉREBRO) ============ -->
     <!-- (Esses ficam sempre no final do <body>) -->
     <!-- ============================================= -->
-    
+
     <!-- Script 1: Lógica da UI (Menu, Dark Mode, Animações, Setas) -->
     <!-- 'defer' faz ele carregar só depois do HTML -->
     <script src="js/script.js" defer></script>
-    
+
     <!-- Script 2: Lógica do Firebase (Puxa dados, Envia form) -->
     <!-- 'type="module"' é OBRIGATÓRIO pra ele entender 'import' -->
     <script src="js/firebase.js" type="module"></script>
 
 </body>
+
 </html>
