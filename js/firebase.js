@@ -2,16 +2,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebas
 import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 import { getFirestore, collection, onSnapshot, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
+// ATUALIZAÇÃO: Puxa a chave do "Cofre" (o config.js)
+import { firebaseConfig } from "./config.js";
+
 // --- 1. INICIALIZAÇÃO E AUTENTICAÇÃO ---
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBsL8FE4ygY0-SyW6vcseUfRZIcrO5OyaY",
-  authDomain: "teste-nucleo-ingles.firebaseapp.com",
-  projectId: "teste-nucleo-ingles",
-  storageBucket: "teste-nucleo-ingles.firebasestorage.app",
-  messagingSenderId: "577482236590",
-  appId: "1:577482236590:web:e49672ee452c97bba1033f"
-};
+// A CHAVE-MESTRA FOI MOVIDA PARA config.js
 
 const appId = firebaseConfig.appId; 
 let db;
