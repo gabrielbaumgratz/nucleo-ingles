@@ -2,7 +2,6 @@
 <head>
     <!-- ============================================= -->
     <!-- ============ CABEÇALHO (O HEAD) ============ -->
-    <!-- (Coisas que o navegador lê, mas não aparecem) -->
     <!-- ============================================= -->
     
     <meta charset="UTF-8">
@@ -12,14 +11,14 @@
     <!-- Favicon (o iconezinho da aba) -->
     <link rel="icon" href="images\logonin.png" type="image/png">
 
-    <!-- ======= CONFIGURAÇÃO DO TAILWIND (A "GAMBIARRA" DO CDN) ======= -->
+    <!-- ======= CONFIGURAÇÃO DO TAILWIND ======= -->
     <!-- 1. Puxa o Tailwind da internet -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- 2. Puxa as fontes do Google (Inter) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     
-    <!-- 3. Configuração (define nossas cores e fontes customizadas) -->
+    <!-- 3. Configuração (define cores e fontes customizadas) -->
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -40,8 +39,7 @@
         }
     </script>
     
-    <!-- ======= CSS CUSTOMIZADO (Onde a mágica do @apply acontece) ======= -->
-    <!-- (Isso TEM que ficar aqui por causa do CDN) -->
+    <!-- ======= CSS CUSTOMIZADO ======= -->
     <style type="text/tailwindcss">
         /* --- 1. Animações e Utilitários (Fade-in, etc) --- */
         .fade-in-up {
@@ -154,7 +152,11 @@
 
     <!-- ============================================= -->
     <!-- ============ NAVBAR (O MENU DE CIMA) ============ -->
+<<<<<<< HEAD
     <!-- ============================================= -->
+=======
+    <!-- (Fica fixo no topo) -->
+>>>>>>> c982bf6f75c7870f7fb73d29c1bcc28b9b4a795b
     <nav class="fixed top-0 left-0 w-full bg-white/80 dark:bg-cinza-escuro-bg/80 backdrop-blur-xl shadow-sm z-50 transition-colors duration-300">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 md:h-20">
             
@@ -187,8 +189,13 @@
                 </button>
             </div>
             
+<<<<<<< HEAD
             <!-- Botão Menu h (só aparece em Celular) -->
             <!-- O script.js escuta o clique nesse ID -->
+=======
+            <!-- Botão Menu (só aparece em Celular) -->
+            <!-- O script.js-->
+>>>>>>> c982bf6f75c7870f7fb73d29c1bcc28b9b4a795b
             <button id="menu-toggle" aria-label="Abrir menu" class="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300">
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -197,7 +204,11 @@
         </div>
         
         <!-- ======= MENU MOBILE (A TELA QUE ABRE NO CELULAR) ======= -->
+<<<<<<< HEAD
         <!-- O script.js tira o 'hidden' quando tu clica no menu h -->
+=======
+        <!-- O script.js tira o 'hidden' -->
+>>>>>>> c982bf6f75c7870f7fb73d29c1bcc28b9b4a795b
         <div id="mobile-menu" class="md:hidden hidden absolute top-0 left-0 w-full h-screen bg-white/95 dark:bg-cinza-escuro-bg/95 backdrop-blur-xl z-50 p-6">
             <div class="flex justify-between items-center mb-12">
                 <a href="#home" class="mobile-link">
@@ -270,9 +281,13 @@
 
     <!-- ============================================= -->
     <!-- ============ SEÇÃO 2: AVISOS ============ -->
+<<<<<<< HEAD
     <!-- (O carrossel que o firebase.js alimenta) -->
     <!-- ============================================= -->
     <!-- ATUALIZAÇÃO: Fundo vermelho pra destacar -->
+=======
+    <!-- ============================================= -->
+>>>>>>> c982bf6f75c7870f7fb73d29c1bcc28b9b4a795b
     <section id="avisos" class="py-24 bg-red-50 dark:bg-gray-900 overflow-hidden relative">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <!-- Título da Seção -->
@@ -289,7 +304,6 @@
             </div>
             
             <!-- MOLDE (Template): O Card de Aviso (fica escondido) -->
-            <!-- O firebase.js pega esse molde, clona, e recheia com os dados -->
             <template id="aviso-card-template">
                 <div class="snap-center flex-shrink-0 w-[90%] sm:w-[80%] md:w-[350px] base-card fade-in-up">
                     <div class="p-6 flex flex-col h-full">
@@ -348,7 +362,11 @@
                 
                 <!-- Card 2: Teens -->
                 <div class="course-card fade-in-up" style="transition-delay: 300ms;">
+<<<<<<< HEAD
                     <img src="images\teenstudy.jpg" alt="Adolescentes estudando" class="w-full h-56 object-cover">
+=======
+                    <img src="images/teenstudy.jpg" alt="Adolescentes estudando" class="w-full h-56 object-cover">
+>>>>>>> c982bf6f75c7870f7fb73d29c1bcc28b9b4a795b
                     <div class="p-8 flex flex-col flex-grow">
                         <h3 class="text-2xl font-bold mb-3">Inglês para Adolescentes</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow">
